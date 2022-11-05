@@ -60,6 +60,24 @@ nav ul li {
 .active {
   display: block;
 }
+.fa-bars {
+  font-size: 1.2rem;
+}
+.fa-xmark {
+  font-size: 1.5rem;
+}
+.fa-mountain-sun {
+  position: relative;
+  left: -0.3em;
+  font-size: 1.2rem;
+  color: black;
+  padding: 0.3em;
+  border-radius: 5px;
+}
+.fa-mountain-sun:hover {
+  color: #fff;
+  background: black;
+}
 /*MAIN */
 .main-background-image {
   background: red;
