@@ -100,6 +100,8 @@ main {
 }
 .blog-post {
   width: min(100%, 30em);
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1em;
 }
 .blog-post-image {
   height: 15em;
