@@ -1,12 +1,13 @@
 const url = "https://frithjof.shop/test/wp-json/wp/v2/posts/";
 const blogPostContainer = document.querySelector("#blog-post-container");
 async function getBlogPosts() {
-  blogPostContainer.innerHTML = "";
+  blogPostContainer.innerHTML = `<div class="loader"></div>`;
   try {
     const response = await fetch(url);
     const blogPosts = await response.json();
     console.log(blogPosts);
     for (let i = 0; i < blogPosts.length; i++) {
+      blogPostContainer.innerHTML = "";
       blogPostContainer.innerHTML += `  <div class="blog-post">
       <img
         src="https://i0.wp.com/worldadventuredivers.com/wp-content/uploads/2022/07/IMG_0633r.jpg?w=2000&ssl=1"
