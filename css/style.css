@@ -1,6 +1,6 @@
 :root {
   /*Colors*/
-  ---main-color: #5885af;
+  ---main-color: #107da8;
 }
 html {
   font-size: 13px;
@@ -29,6 +29,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.19);
+  background: var(---main-color);
 }
 nav .desktop-navigation {
   display: none;
@@ -71,6 +72,9 @@ nav ul li {
 .active {
   display: block;
 }
+.fa-solid {
+  color: #fff;
+}
 .fa-bars {
   font-size: 1.2rem;
 }
@@ -81,7 +85,6 @@ nav ul li {
   position: relative;
   left: -0.3em;
   font-size: 1.2rem;
-  color: black;
   padding: 0.3em;
   border-radius: 5px;
 }
