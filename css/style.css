@@ -13,6 +13,8 @@ body {
 }
 h1 {
   font-size: 1.2rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
 }
 h2 {
   font-size: 1rem;
@@ -69,10 +71,12 @@ nav ul li {
   background: var(---main-color);
   padding-inline-start: 0;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.19);
+  width: min(100vw, 13em);
+  text-align: center;
 }
 .mobile-menu li {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 .mobile-menu a {
   width: 100%;
@@ -112,24 +116,33 @@ nav ul li {
 /*MAIN */
 main {
   padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: min(100%, 30em);
 }
 .blog-post-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
-  justify-items: center;
 }
 .blog-post {
-  width: min(100%, 30em);
   border-bottom: 1px solid lightgray;
   padding-bottom: 1em;
 }
-.blog-post-image {
+.wp-block-image {
+  margin: 0;
+}
+.content-container > img {
   height: 15em;
-  width: 100%;
+  width: 95%;
   background-size: cover;
   border-radius: 3px;
-}
-.content-container {
-  padding: 0.5em 1em;
 }
