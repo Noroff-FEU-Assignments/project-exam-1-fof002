@@ -135,7 +135,7 @@ main {
 }
 .blog-post {
   border-bottom: 1px solid lightgray;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 .wp-block-image {
   margin: 0;
