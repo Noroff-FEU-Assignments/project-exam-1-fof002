@@ -70,8 +70,9 @@ nav ul li {
   background: var(---main-color);
   padding-inline-start: 0;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.19);
-  width: min(100vw, 13em);
+  width: min(100vw, 32em);
   text-align: center;
+  padding: 1em 0;
 }
 .mobile-menu li {
   text-decoration: none;
@@ -79,15 +80,14 @@ nav ul li {
 }
 .mobile-menu a {
   width: 100%;
-  padding: 1em;
   text-decoration: none;
   color: #fff;
 }
-.mobile-menu li:hover {
-  background: #fff;
-}
-.mobile-menu li:hover > a {
-  color: var(---main-color);
+.mobile-menu li:hover,
+.mobile-menu li:focus,
+.active-link {
+  text-decoration: underline !important;
+  color: #fff;
 }
 .active {
   display: block;
@@ -144,4 +144,15 @@ main {
   width: 100%;
   background-size: cover;
   border-radius: 3px;
+}
+
+/* BLOG */
+#load-more {
+  color: #1f79d2;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 1em 0;
+}
+.post-metadata {
+  font-style: italic;
 }
