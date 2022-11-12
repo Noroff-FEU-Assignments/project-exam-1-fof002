@@ -1,5 +1,8 @@
+import { createSimplePost } from "./functions.js";
 const url = "https://frithjof.shop/test/wp-json/wp/v2/posts?_embed";
 const blogPostContainer = document.querySelector("#blog-post-container");
+
+//FETCHING BLOGPOSTS
 async function getBlogPosts() {
   blogPostContainer.innerHTML = `<div class="loader"></div>`;
   try {
@@ -9,22 +12,14 @@ async function getBlogPosts() {
     blogPostContainer.innerHTML = "";
     for (let i = 0; i < blogPosts.length; i++) {
       let post = blogPosts[i];
-      let description = post.excerpt.rendered;
-      let title = post.title.rendered;
-      let id = post.id;
-      let image = post._embedded["wp:featuredmedia"]["0"].source_url;
-
-      blogPostContainer.innerHTML += `<div class="blog-post">
-      <div class="content-container">
-      <img src="${image}" alt="">
-        <section>
-          <h2>${title}</h2>
-          <p>
-            ${description}
-            <a href="blog-specific.html?id=${id}">Read more</a>
-          </p>
-      </div>
-    </div>`;
+      createSimplePost(
+        post.excerpt.rendered,
+        post.title.rendered,
+        post.id,
+        post._embedded["wp:featuredmedia"]["0"].source_url,
+        post._embedded["author"]["0"].name,
+        post.date
+      );
     }
   } catch {
     blogPostContainer.innerHTML =

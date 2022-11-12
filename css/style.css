@@ -62,17 +62,17 @@ nav ul li {
   position: relative;
 }
 .mobile-menu {
-  display: none;
   position: absolute;
   z-index: 10;
   top: 100%;
-  right: -1em;
   background: var(---main-color);
   padding-inline-start: 0;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.19);
   width: min(100vw, 32em);
   text-align: center;
   padding: 1em 0;
+  transition: all 0.3s;
+  right: 100vw;
 }
 .mobile-menu li {
   text-decoration: none;
@@ -90,7 +90,7 @@ nav ul li {
   color: #fff;
 }
 .active {
-  display: block;
+  right: -1em;
 }
 .fa-solid {
   color: #fff;
