@@ -20,7 +20,6 @@ h2 {
   font-size: 1rem;
 }
 .loader {
-  content: "";
   border: 15px solid #fff;
   border-top: 15px solid var(---main-color);
   border-radius: 50%;
