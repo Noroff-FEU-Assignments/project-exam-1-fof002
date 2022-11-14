@@ -14,7 +14,7 @@ async function getBlogPosts() {
     blogPostContainer.innerHTML = "";
     for (let i = 0; i < blogPosts.length; i++) {
       let post = blogPosts[i];
-      if (i === 3) {
+      if (i === 6) {
         break;
       } else {
         createSimplePost(

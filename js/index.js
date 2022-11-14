@@ -12,7 +12,7 @@ async function getBlogPosts() {
   const blogPosts = await response.json();
   console.log(blogPosts);
   blogPostContainer.innerHTML = "";
-  for (let i = 0; i < blogPosts.length; i++) {
+  for (let i = 0; i < 11; i++) {
     let post = blogPosts[i];
     createSimplePost(
       post.excerpt.rendered,
@@ -29,3 +29,17 @@ async function getBlogPosts() {
   }*/
 }
 getBlogPosts();
+
+arrowLeft.addEventListener("click", () => {
+  if (blogPostContainer.classList.contains("carousel-right")) {
+    blogPostContainer.classList.add("carousel-left");
+    arrowLeft.style.display = "none";
+    arrowRight.style.display = "block";
+  }
+});
+arrowRight.addEventListener("click", () => {
+  blogPostContainer.classList.remove("carousel-left");
+  blogPostContainer.classList.add("carousel-right");
+  arrowLeft.style.display = "block";
+  arrowRight.style.display = "none";
+});
