@@ -203,10 +203,10 @@ main {
   cursor: pointer;
 }
 #arrow-right {
-  left: 86%;
+  left: 89%;
 }
 #arrow-left {
-  left: -1%;
+  left: 0%;
 }
 .arrow {
   display: none;
