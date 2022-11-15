@@ -147,6 +147,7 @@ main {
   transition: 0.8s ease;
   z-index: -1;
   position: relative;
+  left:0;
 }
 .blog-post {
   border-bottom: 1px solid lightgray;
