@@ -247,7 +247,7 @@ main {
     gap: 2em;
   }
   #blog-post-carousel {
-    max-width: 1100px;
+    max-width: 1165px;
   }
   .carousel {
     width: 1200px;
@@ -261,7 +261,7 @@ main {
     color: #fff;
   }
   #arrow-right {
-    left: 96%;
+    left: 98%;
   }
   #arrow-left {
     left: -1%;
