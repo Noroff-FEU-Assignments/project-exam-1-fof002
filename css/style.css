@@ -217,11 +217,6 @@ main {
 .arrow {
   display: none;
 }
-#arrow-left:hover,
-#arrow-right:hover {
-  background: var(---main-color);
-  color: #fff;
-}
 .active-arrow {
   display: block;
 }
@@ -256,6 +251,14 @@ main {
   }
   .carousel {
     width: 1200px;
+  }
+  .carousel h2 {
+    text-align: left;
+  }
+  #arrow-left:hover,
+  #arrow-right:hover {
+    background: var(---main-color);
+    color: #fff;
   }
   #arrow-right {
     left: 96%;
