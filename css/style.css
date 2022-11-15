@@ -194,22 +194,25 @@ main {
 .carousel {
   width: 350px;
 }
+.carousel h2 {
+  text-align: center;
+}
 #arrow-left,
 #arrow-right {
   color: var(---main-color);
   font-size: 2rem;
   position: absolute;
-  top: 40%;
+  top: 50%;
   border-radius: 5px;
   padding: 0.2em;
   cursor: pointer;
   z-index: 1;
 }
 #arrow-right {
-  left: 75%;
+  left: 77%;
 }
 #arrow-left {
-  left: 0%;
+  left: 13%;
 }
 .arrow {
   display: none;
@@ -247,10 +250,6 @@ main {
     flex-direction: row;
     position: relative;
     gap: 2em;
-  }
-  #arrow-left,
-  #arrow-right {
-    top: 50%;
   }
   #blog-post-carousel {
     max-width: 1100px;
