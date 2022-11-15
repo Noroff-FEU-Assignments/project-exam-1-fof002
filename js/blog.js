@@ -1,6 +1,6 @@
 import { createSimplePost } from "./functions.js";
 
-const url = "https://frithjof.shop/test/wp-json/wp/v2/posts?_embed";
+const url = "https://frithjof.shop/test/wp-json/wp/v2/posts?per_page=12&_embed";
 const blogPostContainer = document.querySelector("#blog-post-container");
 const olderPostsBtn = document.querySelector("#load-more");
 

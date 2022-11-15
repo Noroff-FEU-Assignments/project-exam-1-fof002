@@ -10,6 +10,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow: hidden;
 }
 h1 {
   font-size: 1.2rem;
@@ -52,8 +53,16 @@ nav {
 nav .desktop-navigation {
   display: none;
   flex-direction: row;
-  gap: 2em;
+  gap: 3em;
   padding-inline-start: 0;
+}
+nav .desktop-navigation a {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+nav .desktop-navigation a:hover {
+  text-decoration: underline;
 }
 nav ul li {
   list-style-type: none;
@@ -62,17 +71,17 @@ nav ul li {
   position: relative;
 }
 .mobile-menu {
-  position: absolute;
   z-index: 10;
+  position: absolute;
   top: 100%;
   background: var(---main-color);
   padding-inline-start: 0;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.19);
-  width: min(100vw, 32em);
+  width: min(100vw, 52em);
   text-align: center;
   padding: 1em 0;
   transition: all 0.3s;
-  right: 100vw;
+  right: 120vw;
 }
 .mobile-menu li {
   text-decoration: none;
@@ -134,6 +143,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
+  transition: 0.8s ease;
 }
 .blog-post {
   border-bottom: 1px solid lightgray;
@@ -172,35 +182,15 @@ main {
   display: flex;
   flex-direction: row;
   position: relative;
-  gap: 2em;
-}
-.carousel-right {
-  animation: slide 0.6s forwards;
-}
-@keyframes slide {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: -100%;
-  }
-}
-.carousel-left {
-  animation: slide-left 0.6s forwards;
-}
-@keyframes slide-left {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0%;
-  }
 }
 #blog-post-carousel {
   display: flex;
   flex-direction: row;
-  max-width: 1100px;
+  max-width: 250px;
   overflow: hidden;
+}
+.carousel {
+  width: 350px;
 }
 #arrow-left,
 #arrow-right {
@@ -213,7 +203,7 @@ main {
   cursor: pointer;
 }
 #arrow-right {
-  left: 96%;
+  left: 86%;
 }
 #arrow-left {
   left: -1%;
@@ -229,9 +219,7 @@ main {
 .active-arrow {
   display: block;
 }
-.carousel {
-  width: min(1200px);
-}
+
 .carousel .content-container {
   width: 250px;
   gap: 1em;
@@ -240,9 +228,30 @@ main {
   .blog-post-container {
     grid-template-columns: 1fr 1fr;
   }
+  #desktop-navigation {
+    display: flex;
+  }
+  #mobile-navigation-btn {
+    display: none;
+  }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1250px) {
   .blog-post-container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .carousel-content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 2em;
+  }
+  #blog-post-carousel {
+    max-width: 1100px;
+  }
+  .carousel {
+    width: 1200px;
+  }
+  #arrow-right {
+    left: 96%;
   }
 }
