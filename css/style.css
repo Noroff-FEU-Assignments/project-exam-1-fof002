@@ -1,6 +1,7 @@
 :root {
   /*Colors*/
   ---main-color: #107da8;
+  --carousel-width-mobile: 267px;
 }
 html {
   font-size: 13px;
@@ -10,7 +11,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 h1 {
   font-size: 1.2rem;
@@ -188,11 +189,11 @@ main {
 #blog-post-carousel {
   display: flex;
   flex-direction: row;
-  max-width: 250px;
+  max-width: var(--carousel-width-mobile);
   overflow: hidden;
 }
 .carousel {
-  width: 350px;
+  width: var(--carousel-width-mobile);
 }
 .carousel h2 {
   text-align: center;
@@ -209,10 +210,10 @@ main {
   z-index: 1;
 }
 #arrow-right {
-  left: 77%;
+  left: 86%;
 }
 #arrow-left {
-  left: 13%;
+  left: 0%;
 }
 .arrow {
   display: none;
@@ -220,9 +221,8 @@ main {
 .active-arrow {
   display: block;
 }
-
 .carousel .content-container {
-  width: 250px;
+  width: var(--carousel-width-mobile);
   gap: 1em;
 }
 @media all and (min-width: 600px) {
