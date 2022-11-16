@@ -32,61 +32,44 @@ async function getBlogPosts() {
 getBlogPosts();
 
 /*IMAGE SLIDER*/
-let counter = 0;
 
-document.addEventListener("click", (event) => {
-  /*THIS IS FOR DESKTOP*/
-  if (window.screen.width >= 1250) {
-    if (event.target.matches("#arrow-right")) {
-      if (counter === 2) {
-        blogPostContainer.style.left = 0;
-        counter = 0;
-        arrowLeft.style.display = "none";
-      } else {
-        counter++;
-        blogPostContainer.style.left = -100 * counter + "%";
-        arrowLeft.style.display = "block";
-      }
-    }
-    if (event.target.matches("#arrow-left")) {
-      if (counter === 1 || counter === 0) {
-        counter = 0;
-        blogPostContainer.style.left = 0;
-        arrowLeft.style.display = "none";
-      } else {
-        counter--;
-        let currentStyleLeft = parseInt(blogPostContainer.style.left);
-        blogPostContainer.style.left = currentStyleLeft + 100 * counter + "%";
-      }
-    }
-    console.log(counter);
-    console.log(blogPostContainer.style.left);
+/*set countermax based on width of browser*/
+let counterMax = "";
+addEventListener("resize", setCounterMax);
+function setCounterMax() {
+  if (window.innerWidth >= 1250) {
+    counterMax = 2;
   }
-  /* THIS IS FOR MOBILE */
-  if (window.screen.width < 1250) {
-    if (event.target.matches("#arrow-right")) {
-      if (counter === 11) {
-        blogPostContainer.style.left = 0;
-        counter = 0;
-        arrowLeft.style.display = "none";
-      } else {
-        counter++;
-        blogPostContainer.style.left = -100 * counter + "%";
-        arrowLeft.style.display = "block";
-      }
+  if (window.innerWidth < 1250) {
+    counterMax = 11;
+  }
+}
+/*Function for slider*/
+let counter = 0;
+document.addEventListener("click", (event) => {
+  if (event.target.matches("#arrow-right")) {
+    if (counter === counterMax) {
+      blogPostContainer.style.left = 0;
+      counter = 0;
+      arrowLeft.style.display = "none";
+    } else {
+      counter++;
+      blogPostContainer.style.left = -100 * counter + "%";
+      arrowLeft.style.display = "block";
     }
-    if (event.target.matches("#arrow-left")) {
-      if (counter === 1 || counter === 0) {
-        counter = 0;
-        blogPostContainer.style.left = 0;
-        arrowLeft.style.display = "none";
-      } else {
-        counter--;
-        let currentStyleLeft = parseInt(blogPostContainer.style.left);
-        blogPostContainer.style.left = currentStyleLeft + 100 * counter + "%";
-      }
+    console.log(counterMax + "+" + counter + "+" + window.innerWidth);
+  }
+  if (event.target.matches("#arrow-left")) {
+    if (counter === 0) {
+      counter = 0;
+      blogPostContainer.style.left = 0;
+      arrowLeft.style.display = "none";
+    } else {
+      counter--;
+      let currentStyleLeft = parseInt(blogPostContainer.style.left);
+      blogPostContainer.style.left = currentStyleLeft + 100 * counter + "%";
     }
-    console.log(counter);
-    console.log(blogPostContainer.style.left);
+    console.log(counterMax + "+" + counter + "+" + window.innerWidth);
   }
 });
+setCounterMax();
