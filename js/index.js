@@ -57,7 +57,15 @@ document.addEventListener("click", (event) => {
       blogPostContainer.style.left = -100 * counter + "%";
       arrowLeft.style.display = "block";
     }
-    console.log(counterMax + "+" + counter + "+" + window.innerWidth);
+    console.log(
+      counterMax +
+        "+" +
+        counter +
+        "+" +
+        window.innerWidth +
+        "+" +
+        blogPostContainer.style.left
+    );
   }
   if (event.target.matches("#arrow-left")) {
     if (counter === 0) {
@@ -67,9 +75,17 @@ document.addEventListener("click", (event) => {
     } else {
       counter--;
       let currentStyleLeft = parseInt(blogPostContainer.style.left);
-      blogPostContainer.style.left = currentStyleLeft + 100 * counter + "%";
+      blogPostContainer.style.left = 100 + currentStyleLeft + "%";
     }
-    console.log(counterMax + "+" + counter + "+" + window.innerWidth);
+    console.log(
+      counterMax +
+        "+" +
+        counter +
+        "+" +
+        window.innerWidth +
+        "+" +
+        blogPostContainer.style.left
+    );
   }
 });
 setCounterMax();
