@@ -232,11 +232,15 @@ main {
 }
 /*blog specific */
 .blog-post-specific img {
-  width: min(46em, 100%);
+  width: min(55em, 100%);
+}
+.blog-post-specific .wp-block-image {
+  display: none;
 }
 .blog-post-specific {
-  width: min(46em, 100%);
+  width: min(55em, 100%);
   padding: 2em 0 0 0;
+  font-size: 1.3rem;
 }
 @media all and (min-width: 600px) {
   .blog-post-container {
@@ -286,7 +290,7 @@ main {
     gap: 1em;
   }
   #blog-post-carousel {
-    max-width: 1165px;
+    max-width: 1166px;
   }
   .carousel {
     width: 1250px;

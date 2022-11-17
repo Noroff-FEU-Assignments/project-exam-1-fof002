@@ -6,16 +6,17 @@ const main = document.querySelector("main");
 const mainTitle = document.querySelector("title");
 
 async function getPost() {
-  const response = await fetch(url);
-  const post = await response.json();
-  console.log(post);
-  let description = post.excerpt.rendered;
-  let title = post.title.rendered;
-  let image = post._embedded["wp:featuredmedia"]["0"].source_url;
-  let author = post._embedded["author"]["0"].name;
-  let date = post.date;
-  mainTitle.innerHTML = title + " " + "- The Mountain Blog";
-  main.innerHTML = `<div class="blog-post-specific">
+  try {
+    const response = await fetch(url);
+    const post = await response.json();
+    console.log(post);
+    let description = post.content.rendered;
+    let title = post.title.rendered;
+    let image = post._embedded["wp:featuredmedia"]["0"].source_url;
+    let author = post._embedded["author"]["0"].name;
+    let date = post.date;
+    mainTitle.innerHTML = title + " " + "- The Mountain Blog";
+    main.innerHTML = `<div class="blog-post-specific">
         <img src="${image}" alt="">
           <section>
             <h1>${title}</h1>
@@ -27,5 +28,8 @@ async function getPost() {
               ${description}
             </p>
       </div>`;
+  } catch (error) {
+    main.innerHTML = `<div class="blog-post-specific">We we're unable to find the blog post you were looking for. Please try again</div>`;
+  }
 }
 getPost();
