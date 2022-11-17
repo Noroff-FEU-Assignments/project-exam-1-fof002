@@ -209,17 +209,17 @@ main {
   color: var(---main-color);
   font-size: 2rem;
   position: absolute;
-  top: 53%;
+  top: 50%;
   border-radius: 5px;
-  padding: 0.2em;
+  padding: 0.8em;
   cursor: pointer;
   z-index: 1;
 }
 #arrow-right {
-  left: 86%;
+  left: 82%;
 }
 #arrow-left {
-  left: 0%;
+  left: -7%;
 }
 .arrow {
   display: none;
@@ -255,7 +255,11 @@ main {
     background: rgb(240, 238, 238);
   }
   #arrow-right {
-    left: 94%;
+    left: 100%;
+  }
+  #arrow-left,
+  #arrow-right {
+    padding: 0.2em;
   }
   #arrow-left:hover,
   #arrow-right:hover {
@@ -286,6 +290,6 @@ main {
     left: 98%;
   }
   #arrow-left {
-    left: -1.5%;
+    left: -1%;
   }
 }
