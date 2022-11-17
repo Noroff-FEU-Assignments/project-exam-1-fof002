@@ -1,7 +1,8 @@
 export function createSimplePost(description, title, id, image, author, date) {
   const blogPostContainer = document.querySelector("#blog-post-container");
   blogPostContainer.innerHTML += `<div class="blog-post">
-        <div class="content-container">
+  <a href="blog-specific.html?id=${id}">      
+  <div class="content-container">
         <img src="${image}" alt="">
           <section>
             <h2>${title}</h2>
@@ -11,8 +12,8 @@ export function createSimplePost(description, title, id, image, author, date) {
           </p>
             <p>
               ${description}
-              <a href="blog-specific.html?id=${id}">Read more</a>
             </p>
         </div>
+        </a>
       </div>`;
 }

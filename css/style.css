@@ -149,8 +149,14 @@ main {
   position: relative;
 }
 .blog-post {
-  border-bottom: 1px solid lightgray;
-  padding-bottom: 0.8em;
+  border-radius: 5px;
+}
+.blog-post:hover {
+  background: rgb(240, 238, 238);
+}
+.blog-post a {
+  color: black;
+  text-decoration: none;
 }
 .wp-block-image {
   margin: 0;
@@ -187,6 +193,7 @@ main {
   position: relative;
   left: 0%;
   transition: 0.4s ease;
+  border-bottom: 1px solid lightgray;
 }
 #blog-post-carousel {
   display: flex;
@@ -205,7 +212,7 @@ main {
   color: var(---main-color);
   font-size: 2rem;
   position: absolute;
-  top: 50%;
+  top: 53%;
   border-radius: 5px;
   padding: 0.2em;
   cursor: pointer;
@@ -225,7 +232,6 @@ main {
 }
 .carousel .content-container {
   width: var(--carousel-width-mobile);
-  gap: 1em;
 }
 @media all and (min-width: 600px) {
   .blog-post-container {
@@ -240,13 +246,13 @@ main {
 }
 @media all and (min-width: 950px) {
   #blog-post-carousel {
-    max-width: 558px;
+    max-width: 560px;
   }
   .carousel {
     width: 554px;
   }
-  .carousel-content {
-    gap: 1em;
+  .blog-post {
+    padding: 0.5em;
   }
   #arrow-right {
     left: 94%;
@@ -265,13 +271,13 @@ main {
     display: flex;
     flex-direction: row;
     position: relative;
-    gap: 2em;
+    gap: 1em;
   }
   #blog-post-carousel {
     max-width: 1165px;
   }
   .carousel {
-    width: 1200px;
+    width: 1250px;
   }
   .carousel h2 {
     text-align: left;
@@ -280,6 +286,6 @@ main {
     left: 98%;
   }
   #arrow-left {
-    left: -1%;
+    left: -1.5%;
   }
 }
