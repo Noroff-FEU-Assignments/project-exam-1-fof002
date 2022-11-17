@@ -230,6 +230,14 @@ main {
 .carousel .content-container {
   width: var(--carousel-width-mobile);
 }
+/*blog specific */
+.blog-post-specific img {
+  width: min(46em, 100%);
+}
+.blog-post-specific {
+  width: min(46em, 100%);
+  padding: 2em 0 0 0;
+}
 @media all and (min-width: 600px) {
   .blog-post-container {
     grid-template-columns: 1fr 1fr;
