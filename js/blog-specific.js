@@ -17,7 +17,7 @@ async function getPost() {
     let date = post.date;
     mainTitle.innerHTML = title + " " + "- The Mountain Blog";
     main.innerHTML = `<div class="blog-post-specific">
-        <img src="${image}" alt="">
+        <img src="${image}" class="" id="specific-image" alt="${title}">
           <section>
             <h1>${title}</h1>
             <p>
@@ -33,3 +33,13 @@ async function getPost() {
   }
 }
 getPost();
+
+document.addEventListener("click", (event) => {
+  const mainImage = document.querySelector("#specific-image");
+  if (event.target.matches("#specific-image") && window.innerWidth >= 1250) {
+    console.log(event.target.id);
+    mainImage.classList.add("focus");
+  } else {
+    mainImage.classList.remove("focus");
+  }
+});
