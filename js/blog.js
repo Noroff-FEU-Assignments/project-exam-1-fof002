@@ -52,7 +52,6 @@ olderPostsBtn.addEventListener("click", async () => {
         post.date
       );
     }
-    Window.scrollBy(0, 100);
   } catch {
     olderPostsBtn.style.display = "none";
     blogPostContainer.innerHTML +=

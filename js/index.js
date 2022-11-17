@@ -3,6 +3,7 @@ const url = "https://frithjof.shop/test/wp-json/wp/v2/posts?per_page=12&_embed";
 const arrowRight = document.querySelector("#arrow-right");
 const arrowLeft = document.querySelector("#arrow-left");
 const blogPostContainer = document.querySelector("#blog-post-container");
+let counterMax = "";
 
 //FETCHING BLOGPOSTS
 async function getBlogPosts() {
@@ -29,26 +30,19 @@ async function getBlogPosts() {
     arrowLeft.style.display = "none";
   }
 }
-getBlogPosts();
-
-/*IMAGE SLIDER*/
-
-/*set countermax based on width of browser*/
-let counterMax = "";
-addEventListener("resize", setCounterMax);
-function setCounterMax() {
+let counter = 0;
+document.addEventListener("click", (event) => {
   if (window.innerWidth >= 1250) {
     counterMax = 2;
   }
-  if (window.innerWidth < 1250) {
+  if (window.innerWidth > 950 && window.innerWidth < 1250) {
+    counterMax = 5;
+  }
+  if (window.innerWidth < 950) {
     counterMax = 11;
   }
-}
-/*Function for slider*/
-let counter = 0;
-document.addEventListener("click", (event) => {
   if (event.target.matches("#arrow-right")) {
-    if (counter === counterMax) {
+    if (counter >= counterMax) {
       blogPostContainer.style.left = 0;
       counter = 0;
       arrowLeft.style.display = "none";
@@ -70,4 +64,4 @@ document.addEventListener("click", (event) => {
     }
   }
 });
-setCounterMax();
+getBlogPosts();

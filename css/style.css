@@ -2,6 +2,7 @@
   /*Colors*/
   ---main-color: #107da8;
   --carousel-width-mobile: 267px;
+  --carousel-width-tablet: 534px;
 }
 html {
   font-size: 13px;
@@ -125,7 +126,7 @@ nav ul li {
 }
 /*MAIN */
 main {
-  padding: 0 1em;
+  padding: 0 min(6em, 5vw);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,6 +238,25 @@ main {
     display: none;
   }
 }
+@media all and (min-width: 950px) {
+  #blog-post-carousel {
+    max-width: 558px;
+  }
+  .carousel {
+    width: 554px;
+  }
+  .carousel-content {
+    gap: 1em;
+  }
+  #arrow-right {
+    left: 94%;
+  }
+  #arrow-left:hover,
+  #arrow-right:hover {
+    background: var(---main-color);
+    color: #fff;
+  }
+}
 @media all and (min-width: 1250px) {
   .blog-post-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -255,11 +275,6 @@ main {
   }
   .carousel h2 {
     text-align: left;
-  }
-  #arrow-left:hover,
-  #arrow-right:hover {
-    background: var(---main-color);
-    color: #fff;
   }
   #arrow-right {
     left: 98%;
