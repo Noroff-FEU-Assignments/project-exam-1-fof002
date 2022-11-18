@@ -304,6 +304,9 @@ footer li {
   border-bottom: 1px solid #fff;
   margin-bottom: 0.2em;
 }
+.logo-container {
+  align-items: center;
+}
 @media all and (min-width: 600px) {
   .blog-post-container {
     grid-template-columns: 1fr 1fr;
@@ -336,8 +339,7 @@ footer li {
     height: 33em;
   }
   .index-image {
-    height: 30em;
-    background-position: top 15em;
+    height: 35em;
   }
   #blog-post-carousel {
     max-width: 560px;
