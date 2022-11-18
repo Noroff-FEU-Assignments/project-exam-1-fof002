@@ -312,7 +312,8 @@ footer li {
 .emailError,
 .firstNameError,
 .lastNameError,
-.messageError {
+.messageError,
+.subjectError {
   display: none;
   color: red;
 }

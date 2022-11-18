@@ -6,6 +6,8 @@ const firstName = document.querySelector("#firstname");
 const firstNameError = document.querySelector(".firstNameError");
 const lastName = document.querySelector("#lastname");
 const lastNameError = document.querySelector(".lastNameError");
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector(".subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector(".messageError");
 
@@ -28,6 +30,11 @@ function validateForm(event) {
     lastNameError.style.display = "block";
   } else {
     lastNameError.style.display = "none";
+  }
+  if (checkLength(subject, 3)) {
+    subjectError.style.display = "block";
+  } else {
+    subjectError.style.display = "none";
   }
   if (checkLength(message, 10)) {
     messageError.style.display = "block";
