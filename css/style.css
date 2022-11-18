@@ -353,6 +353,7 @@ select {
 }
 .checkout-button {
   border: none;
+  margin-top: 1em;
   background: var(---main-color);
   padding: 0.5em;
   color: #fff;
