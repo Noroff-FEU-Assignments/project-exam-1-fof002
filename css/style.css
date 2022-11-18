@@ -322,6 +322,7 @@ footer li {
     justify-content: center;
     margin: 2em auto 8em auto;
     padding-bottom: 2em;
+    height: 10em;
   }
   #mobile-navigation-btn {
     display: none;
