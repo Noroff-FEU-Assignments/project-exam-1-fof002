@@ -191,6 +191,14 @@ main {
   font-style: italic;
 }
 /*Index */
+.index-image {
+  background: url("../images/christian-joudrey-mWRR1xj95hg-unsplash.jpg");
+  width: 100vw;
+  background-position: top 10em;
+  height: 15em;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .carousel-content {
   display: flex;
   flex-direction: row;
@@ -324,6 +332,10 @@ footer li {
   }
   .blog-post-specific img {
     height: 33em;
+  }
+  .index-image {
+    height: 30em;
+    background-position: top 15em;
   }
   #blog-post-carousel {
     max-width: 560px;
