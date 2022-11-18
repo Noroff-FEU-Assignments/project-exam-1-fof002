@@ -9,6 +9,7 @@ let counter = 0;
 //FETCHING BLOGPOSTS
 async function getBlogPosts() {
   blogPostContainer.innerHTML = `<div class="loader"></div>`;
+  setTimeout((arrowRight.style.display = "block"), 1500);
   try {
     const response = await fetch(url);
     const blogPosts = await response.json();
@@ -61,7 +62,7 @@ document.addEventListener("click", (event) => {
     }
   }
   if (event.target.matches("#arrow-left")) {
-    if (counter === 0) {
+    if (counter === 1) {
       counter = 0;
       blogPostContainer.style.left = 0;
       arrowLeft.style.display = "none";
