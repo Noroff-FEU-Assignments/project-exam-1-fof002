@@ -4,6 +4,7 @@ const arrowRight = document.querySelector("#arrow-right");
 const arrowLeft = document.querySelector("#arrow-left");
 const blogPostContainer = document.querySelector("#blog-post-container");
 let counterMax = "";
+let counter = 0;
 
 //FETCHING BLOGPOSTS
 async function getBlogPosts() {
@@ -30,7 +31,14 @@ async function getBlogPosts() {
     arrowLeft.style.display = "none";
   }
 }
-let counter = 0;
+
+/*resets the slider if user resizes the screen. to avoid high values if the screen get bigger*/
+window.addEventListener("resize", () => {
+  counter = 0;
+  blogPostContainer.style.left = 0;
+});
+
+/*Slider function */
 document.addEventListener("click", (event) => {
   if (window.innerWidth >= 1250) {
     counterMax = 2;

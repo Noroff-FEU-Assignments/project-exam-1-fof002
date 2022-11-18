@@ -276,7 +276,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 15em;
+  min-height: 15em;
 }
 footer > * {
   display: flex;
