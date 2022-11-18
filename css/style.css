@@ -273,10 +273,10 @@ footer {
   color: #fff;
   background: var(---main-color);
   margin: 2em auto 0 auto;
-  padding-bottom: 5em;
-  align-items: start;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  height: 15em;
 }
 footer > * {
   display: flex;
