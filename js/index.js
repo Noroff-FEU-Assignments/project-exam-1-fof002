@@ -9,11 +9,10 @@ let counter = 0;
 //FETCHING BLOGPOSTS
 async function getBlogPosts() {
   blogPostContainer.innerHTML = `<div class="loader"></div>`;
-  setTimeout((arrowRight.style.display = "block"), 1500);
   try {
     const response = await fetch(url);
     const blogPosts = await response.json();
-    console.log(blogPosts);
+    setTimeout((arrowRight.style.display = "block"), 1500);
     blogPostContainer.innerHTML = "";
     for (let i = 0; i < 12; i++) {
       let post = blogPosts[i];
