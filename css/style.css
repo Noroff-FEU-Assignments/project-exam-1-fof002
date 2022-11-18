@@ -263,6 +263,7 @@ main {
   position: fixed;
   transform: scale(1.2);
   top: 9em;
+  z-index: 10;
   box-shadow: 0px 2px 5px 10px rgba(0, 0, 0, 0.19);
 }
 /*footer*/
