@@ -9,10 +9,17 @@ html {
 }
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-x: hidden;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 h1 {
   font-size: 1.2rem;
@@ -120,7 +127,7 @@ nav ul li {
   padding: 0.3em;
   border-radius: 5px;
 }
-.fa-mountain-sun:hover {
+nav .fa-mountain-sun:hover {
   color: var(---main-color);
   background: #fff;
 }
@@ -248,13 +255,54 @@ main {
   top: 9em;
   box-shadow: 0px 2px 5px 10px rgba(0, 0, 0, 0.19);
 }
-
+/*footer*/
+footer {
+  width: min(100%, 70em);
+  display: flex;
+  font-size: 1.3rem;
+  color: #fff;
+  background: var(---main-color);
+  margin: 0 auto;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  text-align: start;
+  padding: 1em;
+}
+footer .fa-mountain-sun {
+  font-size: 3rem;
+  left: 0;
+}
+footer ul {
+  padding-inline-start: 0;
+  margin: 0;
+}
+footer li {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 0.2em;
+}
+.footer-header {
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+}
 @media all and (min-width: 600px) {
   .blog-post-container {
     grid-template-columns: 1fr 1fr;
   }
   #desktop-navigation {
     display: flex;
+  }
+  footer {
+    flex-direction: row;
+    border-radius: 5px;
+    gap: 5em;
   }
   #mobile-navigation-btn {
     display: none;
