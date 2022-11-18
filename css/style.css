@@ -154,7 +154,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
-  z-index: -1;
   position: relative;
 }
 .blog-post {

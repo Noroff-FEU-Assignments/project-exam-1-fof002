@@ -26,7 +26,7 @@ async function getBlogPosts() {
       );
     }
   } catch (error) {
-    mai.innerHTML = `<p>Something went wrong! Try again shortly. If this doesn't work, Contact us for assitance</p>`;
+    blogPostContainer.innerHTML = `<p>Something went wrong! Try again shortly. If this doesn't work, Contact us for assitance</p>`;
     arrowRight.style.display = "none";
     arrowLeft.style.display = "none";
   }
