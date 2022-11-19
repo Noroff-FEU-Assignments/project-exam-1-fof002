@@ -52,6 +52,15 @@ window.addEventListener("resize", () => {
 
 /*Slider function */
 document.addEventListener("click", (event) => {
+  if (window.innerWidth >= 1250) {
+    counterMax = 2;
+  }
+  if (window.innerWidth > 950 && window.innerWidth < 1250) {
+    counterMax = 5;
+  }
+  if (window.innerWidth < 950) {
+    counterMax = 11;
+  }
   if (event.target.matches("#arrow-right")) {
     if (counter === counterMax) {
       blogPostContainer.style.left = 0;
