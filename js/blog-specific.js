@@ -36,7 +36,7 @@ getPost();
 
 document.addEventListener("click", (event) => {
   const mainImage = document.querySelector("#specific-image");
-  if (event.target.matches("#specific-image") && window.innerWidth >= 1250) {
+  if (event.target.matches("#specific-image") && window.innerWidth >= 1150) {
     console.log(event.target.id);
     mainImage.classList.add("focus");
   } else {

@@ -12,7 +12,7 @@ async function getBlogPosts() {
   try {
     const response = await fetch(url);
     const blogPosts = await response.json();
-    setTimeout((arrowRight.style.display = "block"), 1500);
+    arrowRight.style.display = "block";
     blogPostContainer.innerHTML = "";
     for (let i = 0; i < 12; i++) {
       let post = blogPosts[i];
@@ -34,8 +34,10 @@ async function getBlogPosts() {
 
 /*resets the slider if user resizes the screen. to avoid high values if the screen get bigger*/
 window.addEventListener("resize", () => {
-  counter = 0;
-  blogPostContainer.style.left = 0;
+  if (counter > counterMax) {
+    counter = 0;
+    blogPostContainer.style.left = 0;
+  }
 });
 
 /*Slider function */
