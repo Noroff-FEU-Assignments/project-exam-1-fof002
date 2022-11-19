@@ -34,14 +34,6 @@ async function getBlogPosts() {
 
 /*resets the slider if user resizes the screen. to avoid high values if the screen get bigger*/
 window.addEventListener("resize", () => {
-  if (counter > counterMax) {
-    counter = 0;
-    blogPostContainer.style.left = 0;
-  }
-});
-
-/*Slider function */
-document.addEventListener("click", (event) => {
   if (window.innerWidth >= 1250) {
     counterMax = 2;
   }
@@ -51,8 +43,17 @@ document.addEventListener("click", (event) => {
   if (window.innerWidth < 950) {
     counterMax = 11;
   }
+  if (counter > counterMax) {
+    counter = 0;
+    blogPostContainer.style.left = 0;
+    arrowLeft.style.display = "none";
+  }
+});
+
+/*Slider function */
+document.addEventListener("click", (event) => {
   if (event.target.matches("#arrow-right")) {
-    if (counter >= counterMax) {
+    if (counter === counterMax) {
       blogPostContainer.style.left = 0;
       counter = 0;
       arrowLeft.style.display = "none";
@@ -63,7 +64,7 @@ document.addEventListener("click", (event) => {
     }
   }
   if (event.target.matches("#arrow-left")) {
-    if (counter === 1) {
+    if (counter === 1 || counter === 0) {
       counter = 0;
       blogPostContainer.style.left = 0;
       arrowLeft.style.display = "none";

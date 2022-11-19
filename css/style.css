@@ -373,7 +373,7 @@ select {
     display: flex;
   }
   .blog-post-specific img {
-    height: 25em;
+    height: 22em;
   }
   footer {
     flex-direction: row;
@@ -383,7 +383,7 @@ select {
     justify-content: center;
     margin: 2em auto 8em auto;
     padding-bottom: 2em;
-    height: 10em;
+    min-height: 10em;
   }
   #mobile-navigation-btn {
     display: none;
@@ -394,7 +394,7 @@ select {
     font-size: 1.3rem;
   }
   .blog-post-specific img {
-    height: 33em;
+    height: 30em;
   }
   .index-image {
     height: 35em;
