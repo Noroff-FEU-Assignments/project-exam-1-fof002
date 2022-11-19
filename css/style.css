@@ -1,6 +1,6 @@
 :root {
   /*Colors*/
-  ---main-color: #107da8;
+  ---main-color: #0a6f97;
   --carousel-width-mobile: 267px;
   --carousel-width-tablet: 534px;
 }
@@ -267,7 +267,7 @@ main {
 }
 /*footer*/
 footer {
-  width: min(100%, 70em);
+  width: 100%;
   display: flex;
   font-size: 1.1rem;
   color: #fff;
@@ -322,11 +322,15 @@ form {
   row-gap: 1em;
   padding: 2em;
   border-radius: 4px;
+  width: min(45em, 100%);
 }
 .label-splitter {
   display: flex;
   flex-direction: row;
   column-gap: 1em;
+}
+.label-splitter > * {
+  flex-basis: 100%;
 }
 input,
 textarea {
@@ -376,7 +380,6 @@ select {
   }
   footer {
     flex-direction: row;
-    border-radius: 5px;
     gap: 5em;
     font-size: 1.3rem;
     justify-content: center;
