@@ -48,6 +48,13 @@ h2 {
   }
 }
 /* HEADER */
+.image-home {
+  padding: 0.2em;
+  border-radius: 3px;
+}
+.image-home:hover {
+  background: rgb(165, 165, 165);
+}
 nav {
   width: calc(100% - 2em);
   position: relative;
@@ -355,7 +362,7 @@ label {
 select {
   background: #fff;
 }
-.checkout-button {
+.submit-button {
   border: none;
   margin-top: 1em;
   background: var(---main-color);
@@ -364,9 +371,11 @@ select {
   font-weight: 800;
   font-size: 1.2em;
   cursor: pointer;
+  box-shadow: 0px 8px 16px 0px rgba(154, 174, 192, 0.72);
 }
-.checkout-button:hover {
+.submit-button:hover {
   transform: scale(1.02);
+  box-shadow: 0px 8px 16px 0px rgb(105, 135, 161);
 }
 @media all and (min-width: 600px) {
   .blog-post-container {
@@ -396,7 +405,7 @@ select {
     font-size: 1.3rem;
   }
   .blog-post-specific img {
-    height: 29em;
+    height: 25em;
   }
   .index-image {
     height: 32em;
