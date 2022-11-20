@@ -20,6 +20,7 @@ document.addEventListener("click", (event) => {
 /*search-function*/
 searchInput.addEventListener("keyup", () => {
   const searchValue = searchInput.value.trim().toLowerCase();
+  displayedResults.innerHTML = "";
   const searchResults = searchArray.filter((matchingPost) =>
     matchingPost.title.rendered.toLowerCase().includes(searchValue)
   );
