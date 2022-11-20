@@ -86,6 +86,9 @@ nav ul li {
 }
 .mobile-nav-parent {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 .mobile-menu {
   z-index: 10;
@@ -126,6 +129,9 @@ nav ul li {
 .fa-bars {
   font-size: 1.8rem;
 }
+.fa-magnifying-glass {
+  font-size: 1.5rem;
+}
 .fa-xmark {
   font-size: 2.2rem;
 }
@@ -136,9 +142,35 @@ nav ul li {
   padding: 0.3em;
   border-radius: 5px;
 }
-nav .fa-mountain-sun:hover {
+.fa-magnifying-glass {
+  padding: 0.3em;
+  border-radius: 5px;
+}
+nav .fa-mountain-sun:hover,
+.fa-magnifying-glass:hover {
   color: var(---main-color);
   background: #fff;
+}
+#search-input {
+  width: min(20em, 90%);
+  margin: 0 auto;
+}
+#displayed-results {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 0.5em 0.3em;
+}
+#displayed-results div a,
+#displayed-results div span {
+  color: black;
+  font-size: 1rem;
+}
+.link {
+  color: blue !important;
+}
+#displayed-results div a:hover {
+  text-decoration: underline;
 }
 /*MAIN */
 main {
@@ -153,7 +185,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: min(100%, 120em);
+  width: min(100%, 75em);
   padding-bottom: 2em;
   position: relative;
 }
@@ -378,9 +410,6 @@ select {
   box-shadow: 0px 8px 16px 0px rgb(105, 135, 161);
 }
 @media all and (min-width: 600px) {
-  .blog-post-container {
-    grid-template-columns: 1fr 1fr;
-  }
   #desktop-navigation {
     display: flex;
   }
@@ -437,7 +466,7 @@ select {
 }
 @media all and (min-width: 1250px) {
   .blog-post-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .carousel-content {
     display: flex;
