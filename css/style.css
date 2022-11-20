@@ -263,7 +263,7 @@ main {
 .blog-post-specific {
   width: min(60em, 100%);
   padding: 2em 0 0 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .focus {
   position: fixed;
@@ -402,7 +402,7 @@ select {
 }
 @media all and (min-width: 950px) {
   .blog-post-specific {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .blog-post-specific img {
     height: 25em;
