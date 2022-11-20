@@ -433,6 +433,9 @@ select {
   .blog-post-specific {
     font-size: 1.1rem;
   }
+  #mobile-menu {
+    width: 100vw;
+  }
   .blog-post-specific img {
     height: 25em;
   }
