@@ -12,9 +12,10 @@ document.addEventListener("click", (event) => {
   if (
     event.target.matches("#mobile-navigation-btn") ||
     event.target.matches("#search-icon")
-  )
+  ) {
     mobileNav.classList.toggle("active");
-  navBtn.classList.toggle("fa-xmark");
+    navBtn.classList.toggle("fa-xmark");
+  }
 });
 
 /*search-function*/
