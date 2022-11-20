@@ -21,20 +21,22 @@ document.addEventListener("click", (event) => {
 /*search-function*/
 searchInput.addEventListener("keyup", () => {
   const searchValue = searchInput.value.trim().toLowerCase();
-  displayedResults.innerHTML = "";
+  displayedResults.style.display = "block";
+  displayedResults.innerHTML = `<div id="no-posts">No posts matching your criteria</div>`;
   const searchResults = searchArray.filter((matchingPost) =>
     matchingPost.title.rendered.toLowerCase().includes(searchValue)
   );
   if (searchValue.length > 1) {
-    for (i = 0; i < searchResults.length; i++) {
-      displayedResults.style.display = "block";
-      let filteredPostTitle = searchResults[i].title.rendered;
-      let filteredPostId = searchResults[i].id;
-      let filteredPostDaste = searchResults[i].date;
-      displayedResults.innerHTML += `<div><a class="link" href="blog-specific.html?id=${filteredPostId}">${filteredPostTitle}</a><span> - (${filteredPostDaste})</span></div>`;
+    if (searchResults.length >= 1) {
+      console.log(searchResults);
+      displayedResults.innerHTML = "";
+      for (i = 0; i < searchResults.length; i++) {
+        let filteredPostTitle = searchResults[i].title.rendered;
+        let filteredPostId = searchResults[i].id;
+        let filteredPostDaste = searchResults[i].date;
+        displayedResults.innerHTML += `<div><a class="link" href="blog-specific.html?id=${filteredPostId}">${filteredPostTitle}</a><span> - (${filteredPostDaste})</span></div>`;
+      }
     }
-  } else {
-    displayedResults.style.display = "none";
   }
 });
 

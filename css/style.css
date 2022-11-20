@@ -74,7 +74,7 @@ nav .desktop-navigation {
   padding-inline-start: 0;
 }
 nav .desktop-navigation a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #fff;
   text-decoration: none;
 }
@@ -106,7 +106,7 @@ nav ul li {
 }
 .mobile-menu li {
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0.3em 0;
 }
 .mobile-menu a {
@@ -118,7 +118,6 @@ nav ul li {
 .mobile-menu li:focus,
 .active-link {
   text-decoration: underline !important;
-  color: #fff;
 }
 .active {
   right: -1em;
@@ -155,11 +154,18 @@ nav .fa-mountain-sun:hover,
   width: min(20em, 90%);
   margin: 0 auto;
 }
+#no-posts {
+  font-size: 1rem;
+}
+
 #displayed-results {
   display: none;
   background: #fff;
   text-align: center;
   padding: 0.5em 0.3em;
+  width: min(33em, 100%);
+  margin: 0 auto;
+  border-radius: 5px;
 }
 #displayed-results div a,
 #displayed-results div span {
