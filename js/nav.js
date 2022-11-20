@@ -25,7 +25,6 @@ searchInput.addEventListener("keyup", () => {
   );
   if (searchValue.length > 1) {
     for (i = 0; i < searchResults.length; i++) {
-      displayedResults.innerHTML = "";
       displayedResults.style.display = "block";
       let filteredPostTitle = searchResults[i].title.rendered;
       let filteredPostId = searchResults[i].id;
