@@ -3,6 +3,7 @@ const url = "https://frithjof.shop/test/wp-json/wp/v2/posts?per_page=12&_embed";
 const arrowRight = document.querySelector("#arrow-right");
 const arrowLeft = document.querySelector("#arrow-left");
 const blogPostContainer = document.querySelector("#blog-post-container");
+const backgroundLoader = document.querySelector("#background-loader");
 let counterMax = "";
 let counter = 0;
 
@@ -31,6 +32,7 @@ async function getBlogPosts() {
     arrowLeft.style.display = "none";
   }
 }
+/*Setting grey background while loading*/
 
 /*resets the slider if user resizes the screen. to avoid high values if the screen get bigger*/
 window.addEventListener("resize", () => {
