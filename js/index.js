@@ -14,7 +14,7 @@ async function getBlogPosts() {
     const response = await fetch(url);
     const blogPosts = await response.json();
     arrowRight.style.display = "block";
-    blogPostContainer.innerHTML = "";
+    backgroundLoader.style.display = "none";
     for (let i = 0; i < 12; i++) {
       let post = blogPosts[i];
       createSimplePost(
@@ -32,7 +32,6 @@ async function getBlogPosts() {
     arrowLeft.style.display = "none";
   }
 }
-/*Setting grey background while loading*/
 
 /*resets the slider if user resizes the screen. to avoid high values if the screen get bigger*/
 window.addEventListener("resize", () => {
