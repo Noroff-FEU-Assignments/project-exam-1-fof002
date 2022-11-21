@@ -2,15 +2,14 @@ import { createSimplePost } from "./functions.js";
 const url = "https://frithjof.shop/test/wp-json/wp/v2/posts?per_page=12&_embed";
 const blogPostContainer = document.querySelector("#blog-post-container");
 const olderPostsBtn = document.querySelector("#load-more");
+const backgroundLoader = document.querySelector("#background-loader");
 
 //FETCHING THE FIRST TEN BLOGPOSTS
 async function getBlogPosts() {
-  blogPostContainer.innerHTML = `<div class="loader"></div>`;
   try {
     const response = await fetch(url);
     const blogPosts = await response.json();
-    console.log(blogPosts);
-    blogPostContainer.innerHTML = "";
+    backgroundLoader.style.display = "none";
     for (let i = 0; i < blogPosts.length; i++) {
       let post = blogPosts[i];
       if (i === 10) {

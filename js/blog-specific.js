@@ -4,12 +4,13 @@ const queryId = params.get("id");
 const url = `https://frithjof.shop/test/wp-json/wp/v2/posts/${queryId}?_embed`;
 const main = document.querySelector("main");
 const mainTitle = document.querySelector("title");
+const backgroundLoader = document.querySelector("#background-loader");
 
 async function getPost() {
   try {
     const response = await fetch(url);
     const post = await response.json();
-    console.log(post);
+    backgroundLoader.style.display = "none";
     let description = post.content.rendered;
     let title = post.title.rendered;
     let image = post._embedded["wp:featuredmedia"]["0"].source_url;
