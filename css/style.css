@@ -446,6 +446,9 @@ select {
   #mobile-navigation-btn {
     display: none;
   }
+  .blog-post-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media all and (min-width: 950px) {
   .blog-post-specific {
@@ -486,9 +489,6 @@ select {
   }
 }
 @media all and (min-width: 1250px) {
-  .blog-post-container {
-    grid-template-columns: 1fr 1fr;
-  }
   .carousel-content {
     display: flex;
     flex-direction: row;
