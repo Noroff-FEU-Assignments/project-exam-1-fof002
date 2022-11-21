@@ -217,6 +217,11 @@ main {
   background-size: cover;
   border-radius: 3px;
 }
+.background-loader .loader {
+  margin: 0 auto;
+  position: relative;
+  top: 9em;
+}
 .background-loader {
   position: absolute;
   z-index: 9999;
@@ -224,7 +229,7 @@ main {
   background: lightgray;
   height: 200vh;
   opacity: 0.97;
-  animation: loader 3s forwards;
+  animation: loader 2.2s forwards;
 }
 @keyframes loader {
   0% {
@@ -233,6 +238,7 @@ main {
   100% {
     opacity: 0;
     display: none;
+    z-index: -1;
   }
 }
 
