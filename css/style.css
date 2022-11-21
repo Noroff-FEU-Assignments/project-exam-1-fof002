@@ -224,7 +224,7 @@ main {
   background: lightgray;
   height: 200vh;
   opacity: 0.97;
-  animation: loader 2.5s forwards;
+  animation: loader 3s forwards;
 }
 @keyframes loader {
   0% {
