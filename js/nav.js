@@ -26,16 +26,13 @@ searchInput.addEventListener("keyup", () => {
   const searchResults = searchArray.filter((matchingPost) =>
     matchingPost.title.rendered.toLowerCase().includes(searchValue)
   );
-  if (searchValue.length > 1) {
-    if (searchResults.length >= 1) {
-      console.log(searchResults);
-      displayedResults.innerHTML = "";
-      for (i = 0; i < searchResults.length; i++) {
-        let filteredPostTitle = searchResults[i].title.rendered;
-        let filteredPostId = searchResults[i].id;
-        let filteredPostDaste = searchResults[i].date;
-        displayedResults.innerHTML += `<div><a class="link" href="blog-specific.html?id=${filteredPostId}">${filteredPostTitle}</a><span> - (${filteredPostDaste})</span></div>`;
-      }
+  if (searchValue.length > 1 && searchResults.length >= 1) {
+    displayedResults.innerHTML = "";
+    for (i = 0; i < searchResults.length; i++) {
+      let filteredPostTitle = searchResults[i].title.rendered;
+      let filteredPostId = searchResults[i].id;
+      let filteredPostDaste = searchResults[i].date;
+      displayedResults.innerHTML += `<div><a class="link" href="blog-specific.html?id=${filteredPostId}">${filteredPostTitle}</a><span> - (${filteredPostDaste})</span></div>`;
     }
   }
 });
