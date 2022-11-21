@@ -9,7 +9,7 @@ let counter = 0;
 
 //FETCHING BLOGPOSTS
 async function getBlogPosts() {
-  blogPostContainer.innerHTML = `<div class="loader"></div>`;
+  /*blogPostContainer.innerHTML = `<div class="loader"></div>`;*/
   try {
     const response = await fetch(url);
     const blogPosts = await response.json();
