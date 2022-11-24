@@ -321,7 +321,7 @@ main {
   top: 2em;
   z-index: 10;
   box-shadow: 0px 2px 5px 10px rgba(0, 0, 0, 0.19);
-  height: 70vh !important;
+  height: min(80vh, 33em) !important;
 }
 /*footer*/
 footer {
@@ -433,7 +433,7 @@ select {
     display: flex;
   }
   .blog-post-specific img {
-    height: 22em;
+    height: 23em;
   }
   footer {
     flex-direction: row;
@@ -459,7 +459,7 @@ select {
     width: 100vw;
   }
   .blog-post-specific img {
-    height: 25em;
+    height: 27em;
   }
   .index-image {
     height: 32em;
