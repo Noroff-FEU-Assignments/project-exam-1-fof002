@@ -250,7 +250,7 @@ main {
 }
 /*Index */
 .index-image {
-  background: url("../images/christian-joudrey-mWRR1xj95hg-unsplash.jpg");
+  background-image: url("../images/index-image-resized.jpg");
   width: 100vw;
   background-position: top 10em;
   height: 10em;
@@ -316,11 +316,12 @@ main {
   font-size: 1.1rem;
 }
 .focus {
-  position: fixed;
+  position: relative;
   transform: scale(1.2);
-  top: 9em;
+  top: 2em;
   z-index: 10;
   box-shadow: 0px 2px 5px 10px rgba(0, 0, 0, 0.19);
+  height: 70vh !important;
 }
 /*footer*/
 footer {
