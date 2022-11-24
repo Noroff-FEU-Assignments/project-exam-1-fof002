@@ -236,6 +236,7 @@ main {
   cursor: pointer;
   padding: 0.5em 0.4em;
   background: var(---main-color);
+  outline: 1px solid var(---main-color);
   border-radius: 3px;
   font-size: 1rem;
   margin-top: 1em;
@@ -417,6 +418,7 @@ select {
   border: none;
   margin-top: 1em;
   background: var(---main-color);
+  outline: 1px solid var(---main-color);
   padding: 0.5em;
   color: #fff;
   font-weight: 800;
@@ -440,7 +442,7 @@ select {
     gap: 5em;
     font-size: 1.3rem;
     justify-content: center;
-    margin: 2em auto 8em auto;
+    margin: 2em auto 0em auto;
     padding-bottom: 2em;
     min-height: 10em;
   }
