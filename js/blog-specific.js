@@ -3,6 +3,7 @@ const params = new URLSearchParams(queryString);
 const queryId = params.get("id");
 const url = `https://frithjof.shop/test/wp-json/wp/v2/posts/${queryId}?_embed`;
 const main = document.querySelector("main");
+const blurr = document.querySelector("#blurr");
 const mainTitle = document.querySelector("title");
 const backgroundLoader = document.querySelector("#background-loader");
 
@@ -40,7 +41,9 @@ document.addEventListener("click", (event) => {
   if (event.target.matches("#specific-image") && window.innerWidth >= 1150) {
     console.log(event.target.id);
     mainImage.classList.add("focus");
+    blurr.classList.add("display");
   } else {
     mainImage.classList.remove("focus");
+    blurr.classList.remove("display");
   }
 });
