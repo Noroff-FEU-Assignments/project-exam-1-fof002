@@ -51,17 +51,24 @@
         <div class="mobile-nav-parent">
           <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
           <strong class="fa-solid fa-bars" id="mobile-navigation-btn"></strong>
-          <ul id="mobile-menu" class="mobile-menu">
-            <li class="results">
+          <div id="mobile-menu" class="mobile-menu">
+            <div class="results">
               <label class="search-label" for="search-input">Search</label>
-              <input type="text" id="search-input" name="search-input" />
-            </li>
-            <li><div id="displayed-results"></div></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html" class="active-link">Blog</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </ul>
+              <input
+                type="text"
+                id="search-input"
+                name="search-input"
+                placeholder="Type here..."
+              />
+            </div>
+            <ul id="displayed-results"></ul>
+            <ul class="mobile-menu-list">
+              <li><a href="index.html" class="active-link">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
