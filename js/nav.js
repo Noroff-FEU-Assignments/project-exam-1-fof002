@@ -22,7 +22,7 @@ document.addEventListener("click", (event) => {
 searchInput.addEventListener("keyup", () => {
   const searchValue = searchInput.value.trim().toLowerCase();
   displayedResults.style.display = "block";
-  displayedResults.innerHTML = `<div id="no-posts">No posts matching your criteria</div>`;
+  displayedResults.innerHTML = `<li id="no-posts">No posts matching your criteria</li>`;
   const searchResults = searchArray.filter((matchingPost) =>
     matchingPost.title.rendered.toLowerCase().includes(searchValue)
   );
@@ -32,7 +32,7 @@ searchInput.addEventListener("keyup", () => {
       let filteredPostTitle = searchResults[i].title.rendered;
       let filteredPostId = searchResults[i].id;
       let filteredPostDaste = searchResults[i].date;
-      displayedResults.innerHTML += `<div><a class="link" href="blog-specific.html?id=${filteredPostId}">${filteredPostTitle}</a><span> - (${filteredPostDaste})</span></div>`;
+      displayedResults.innerHTML += `<li><a class="link" href="blog-specific.html?id=${filteredPostId}">${filteredPostTitle}<span> - (${filteredPostDaste})</span></a></li>`;
     }
   }
 });
