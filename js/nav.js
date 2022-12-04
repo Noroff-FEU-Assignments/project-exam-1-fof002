@@ -31,7 +31,7 @@ searchInput.addEventListener("keyup", () => {
     for (i = 0; i < searchResults.length; i++) {
       let filteredPostTitle = searchResults[i].title.rendered;
       let filteredPostId = searchResults[i].id;
-      let filteredPostDaste = searchResults[i].date;
+      let filteredPostDaste = searchResults[i].formatted_date;
       displayedResults.innerHTML += `<li><a class="link" href="blog-specific.html?id=${filteredPostId}">${filteredPostTitle}<span> - (${filteredPostDaste})</span></a></li>`;
     }
   }

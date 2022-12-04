@@ -16,7 +16,7 @@ async function getPost() {
     let title = post.title.rendered;
     let image = post._embedded["wp:featuredmedia"]["0"].source_url;
     let author = post._embedded["author"]["0"].name;
-    let date = post.date;
+    let date = post.formatted_date;
     mainTitle.innerHTML = title + " " + "| The Mountain Blog";
     main.innerHTML = `<div class="blog-post-specific">
         <img src="${image}" class="" id="specific-image" alt="${title}">

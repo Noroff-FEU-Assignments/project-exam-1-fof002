@@ -21,7 +21,7 @@ async function getBlogPosts() {
           post.id,
           post._embedded["wp:featuredmedia"]["0"].source_url,
           post._embedded["author"]["0"].name,
-          post.date
+          post.formatted_date
         );
       }
     }
@@ -47,7 +47,7 @@ olderPostsBtn.addEventListener("click", async () => {
         post.id,
         post._embedded["wp:featuredmedia"]["0"].source_url,
         post._embedded["author"]["0"].name,
-        post.date
+        post.formatted_date
       );
     }
   } catch {

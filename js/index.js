@@ -14,6 +14,7 @@ async function getBlogPosts() {
     const blogPosts = await response.json();
     arrowRight.style.display = "block";
     backgroundLoader.style.display = "none";
+    console.log(blogPosts);
     for (let i = 0; i < 12; i++) {
       let post = blogPosts[i];
       createSimplePost(
@@ -22,7 +23,7 @@ async function getBlogPosts() {
         post.id,
         post._embedded["wp:featuredmedia"]["0"].source_url,
         post._embedded["author"]["0"].name,
-        post.date
+        post.formatted_date
       );
     }
   } catch (error) {
