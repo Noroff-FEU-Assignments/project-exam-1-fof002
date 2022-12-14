@@ -1,8 +1,8 @@
-# Semester project
+# Project Exam 1
 
 ![nationale-par](https://user-images.githubusercontent.com/80104002/207572860-b6b0eef3-e9b1-456a-889d-e0449e3c1727.jpg)
 
-A semester project for a made up science museum created with CSS and HTML.
+The first year project exam for Noroff front-end course. Made with HTML, CSS and Javascript. Used Wordpress as a headless CMS and wordpress API for content. 
 
 ## Description
 
