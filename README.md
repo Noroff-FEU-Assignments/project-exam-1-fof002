@@ -28,7 +28,7 @@ HTML, CSS, Javascript. Used wordpress API to fetch content for blog.
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:https://github.com/fof002/semesterproject.git
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-fof002.git
 ```
 
 ## Contributing
